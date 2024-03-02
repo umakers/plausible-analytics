@@ -81,9 +81,15 @@ defmodule PlausibleWeb.Live.Sites do
         <p :if={not @has_sites?} class="dark:text-gray-100">
           You don't have any sites yet.
         </p>
-        <div class="mt-4 flex sm:ml-4 sm:mt-0">
+        <!-- <div class="mt-4 flex sm:ml-4 sm:mt-0">
           <a href={"/sites/new?flow=#{PlausibleWeb.Flows.provisioning()}"} class="button">
             + Add Website
+          </a>
+        </div> -->
+
+        <div class="mt-4 flex sm:ml-4 sm:mt-0">
+          <a href="https://umakers.dk" class="button">
+            Hosting af Umakers
           </a>
         </div>
       </div>
