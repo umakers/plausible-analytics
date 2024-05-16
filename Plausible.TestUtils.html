@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -157,14 +157,6 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#add_imported_data/1" translate="no">add_imported_data(map)</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#await_clickhouse_count/2" translate="no">await_clickhouse_count(query, expected)</a>
 
       </div>
@@ -181,7 +173,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#create_events/1" translate="no">create_events(events)</a>
+        <a href="#create_legacy_site_import/1" translate="no">create_legacy_site_import(map)</a>
 
       </div>
 
@@ -205,14 +197,6 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#create_sessions/1" translate="no">create_sessions(sessions)</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#create_site/1" translate="no">create_site(map)</a>
 
       </div>
@@ -221,7 +205,23 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#create_site_import/1" translate="no">create_site_import(opts)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#create_user/1" translate="no">create_user(_)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#ensure_minio/0" translate="no">ensure_minio()</a>
 
       </div>
 
@@ -254,6 +254,22 @@ Pages
     <div class="summary-row">
       <div class="summary-signature">
         <a href="#log_in/1" translate="no">log_in(map)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#maybe_fake_minio/1" translate="no">maybe_fake_minio(context)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#minio_running?/0" translate="no">minio_running?()</a>
 
       </div>
 
@@ -344,28 +360,6 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="add_imported_data/1">
-
-  <div class="detail-header">
-    <a href="#add_imported_data/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">add_imported_data(map)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L50" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
 <section class="detail" id="await_clickhouse_count/2">
 
   <div class="detail-header">
@@ -375,7 +369,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">await_clickhouse_count(query, expected)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L268" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L228" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -397,7 +391,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">create_api_key(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L64" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L72" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -410,16 +404,16 @@ Pages
 
   </section>
 </section>
-<section class="detail" id="create_events/1">
+<section class="detail" id="create_legacy_site_import/1">
 
   <div class="detail-header">
-    <a href="#create_events/1" class="detail-link" title="Link to this function">
+    <a href="#create_legacy_site_import/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">create_events(events)</h1>
+    <h1 class="signature" translate="no">create_legacy_site_import(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L92" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L50" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -441,7 +435,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">create_new_site(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L59" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L67" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -463,29 +457,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">create_pageviews(pageviews)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L76" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="create_sessions/1">
-
-  <div class="detail-header">
-    <a href="#create_sessions/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">create_sessions(sessions)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L103" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L84" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -520,6 +492,28 @@ Pages
 
   </section>
 </section>
+<section class="detail" id="create_site_import/1">
+
+  <div class="detail-header">
+    <a href="#create_site_import/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">create_site_import(opts)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L54" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="create_user/1">
 
   <div class="detail-header">
@@ -530,6 +524,28 @@ Pages
     <h1 class="signature" translate="no">create_user(_)</h1>
 
       <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L37" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="ensure_minio/0">
+
+  <div class="detail-header">
+    <a href="#ensure_minio/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">ensure_minio()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L254" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -555,7 +571,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">eventually(expectation, wait_time_ms \\ 50, retries \\ 10)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L255" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L215" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -579,7 +595,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">generate_usage_for(site, i, timestamp \\ NaiveDateTime.utc_now())</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L140" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L125" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -601,7 +617,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">init_session(conn)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L124" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L109" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -623,7 +639,51 @@ Pages
     </a>
     <h1 class="signature" translate="no">log_in(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L116" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L101" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="maybe_fake_minio/1">
+
+  <div class="detail-header">
+    <a href="#maybe_fake_minio/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maybe_fake_minio(context)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L287" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="minio_running?/0">
+
+  <div class="detail-header">
+    <a href="#minio_running?/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">minio_running?()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L244" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -669,7 +729,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">populate_stats(events)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L168" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L153" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -691,7 +751,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">populate_stats(site, events)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L161" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L146" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -713,7 +773,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">populate_stats(site, import_id, events)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L146" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L131" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -735,7 +795,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">random_ip()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L280" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L240" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -757,7 +817,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">relative_time(shifts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L237" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L197" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -803,7 +863,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">to_naive_truncate(dt)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L243" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L203" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -825,7 +885,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">use_api_key(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L70" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/test_utils.ex#L78" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

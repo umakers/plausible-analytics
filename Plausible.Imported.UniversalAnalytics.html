@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -207,7 +207,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">from_report(data, site_id, import_id, table)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/universal_analytics.ex#L112" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/universal_analytics.ex#L67" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -229,7 +229,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">import_data(site_import, opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/universal_analytics.ex#L92" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/universal_analytics.ex#L47" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -265,7 +265,8 @@ to Clickhouse by the <a href="Plausible.Imported.Buffer.html"><code class="inlin
       <div class="specs">
 
           <pre translate="no"><span class="attribute">@spec</span> new_import(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) ::
-  {:ok, <a href="https://hexdocs.pm/oban/2.17.2/Oban.Job.html#t:t/0">Oban.Job.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.11.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+  {:ok, <a href="https://hexdocs.pm/oban/2.17.2/Oban.Job.html#t:t/0">Oban.Job.t</a>()}
+  | {:error, <a href="https://hexdocs.pm/ecto/3.11.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>() | :import_in_progress | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}</pre>
 
       </div>
 

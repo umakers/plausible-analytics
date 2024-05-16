@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>Plausible.Google.ReportRequest — Plausible v0.0.1</title>
+    <title>Plausible.Google.GA4.HTTP — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,16 +131,20 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/report_request.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Google.ReportRequest</span> 
+  <span translate="no">Plausible.Google.GA4.HTTP</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>HTTP client implementation for Google Analytics 4 API.</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -150,20 +154,6 @@ Pages
       </a>
       <span class="text">Summary</span>
     </h1>
-<div class="summary-types summary">
-  <h2>
-    <a href="#types">Types</a>
-  </h2>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#t:t/0" translate="no">t()</a>
-
-      </div>
-
-    </div>
-
-</div>
 <div class="summary-functions summary">
   <h2>
     <a href="#functions">Functions</a>
@@ -171,7 +161,39 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#full_report/0" translate="no">full_report()</a>
+        <a href="#get_analytics_end_date/2" translate="no">get_analytics_end_date(access_token, property)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_analytics_start_date/2" translate="no">get_analytics_start_date(access_token, property)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_property/2" translate="no">get_property(access_token, property)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_report/1" translate="no">get_report(report_request)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#list_accounts_for_user/1" translate="no">list_accounts_for_user(access_token)</a>
 
       </div>
 
@@ -182,24 +204,90 @@ Pages
   </section>
 
 
-  <section id="types" class="details-list">
+  <section id="functions" class="details-list">
     <h1 class="section-heading">
-      <a class="hover-link" href="#types">
+      <a class="hover-link" href="#functions">
         <i class="ri-link-m" aria-hidden="true"></i>
       </a>
-      <span class="text">Types</span>
+      <span class="text">Functions</span>
     </h1>
-    <div class="types-list">
-<section class="detail" id="t:t/0">
+    <div class="functions-list">
+<section class="detail" id="get_analytics_end_date/2">
 
   <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
+    <a href="#get_analytics_end_date/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">t()</h1>
+    <h1 class="signature" translate="no">get_analytics_end_date(access_token, property)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/report_request.ex#L13" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L206" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_analytics_start_date/2">
+
+  <div class="detail-header">
+    <a href="#get_analytics_start_date/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_analytics_start_date(access_token, property)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L202" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_property/2">
+
+  <div class="detail-header">
+    <a href="#get_property/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_property(access_token, property)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L170" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="get_report/1">
+
+  <div class="detail-header">
+    <a href="#get_report/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_report(report_request)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L12" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -211,44 +299,24 @@ Pages
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@type</span> t() :: %Plausible.Google.ReportRequest{
-  access_token: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
-  dataset: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
-  date_range: <a href="https://hexdocs.pm/elixir/Date.Range.html#t:t/0">Date.Range.t</a>(),
-  dimensions: [<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()],
-  metrics: [<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()],
-  page_size: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>(),
-  page_token: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | nil,
-  view_id: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()
-}</pre>
+          <pre translate="no"><span class="attribute">@spec</span> get_report(<a href="Plausible.Google.GA4.ReportRequest.html#t:t/0">Plausible.Google.GA4.ReportRequest.t</a>()) ::
+  {:ok, {[<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()], <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()}} | {:error, <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}</pre>
 
       </div>
 
 
   </section>
 </section>
-
-    </div>
-  </section>
-
-  <section id="functions" class="details-list">
-    <h1 class="section-heading">
-      <a class="hover-link" href="#functions">
-        <i class="ri-link-m" aria-hidden="true"></i>
-      </a>
-      <span class="text">Functions</span>
-    </h1>
-    <div class="functions-list">
-<section class="detail" id="full_report/0">
+<section class="detail" id="list_accounts_for_user/1">
 
   <div class="detail-header">
-    <a href="#full_report/0" class="detail-link" title="Link to this function">
+    <a href="#list_accounts_for_user/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">full_report()</h1>
+    <h1 class="signature" translate="no">list_accounts_for_user(access_token)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/report_request.ex#L24" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/ga4/http.ex#L146" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

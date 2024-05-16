@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -143,7 +143,8 @@ Pages
 
 
   <section id="moduledoc">
-<p>CSV importer from S3 that uses ClickHouse <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/s3">s3 table function.</a></p>
+<p>CSV importer from either S3 for which it uses ClickHouse <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/s3">s3 table function</a>
+or from local storage for which it uses <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/input">input function.</a></p>
   </section>
 
 
@@ -161,9 +162,59 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#date_range/1" translate="no">date_range(uploads)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Extracts min/max date range from a list of uploads.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#extract_table/1" translate="no">extract_table(filename)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Extracts the table name from the provided filename.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#local_dir/1" translate="no">local_dir(site_id)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns local directory for CSV imports storage.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#new_import/3" translate="no">new_import(site, user, opts)</a>
 
       </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#parse_filename!/1" translate="no">parse_filename!(filename)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Extracts table name and min/max dates from the filename.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#valid_filename?/1" translate="no">valid_filename?(filename)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Checks if the provided filename conforms to the expected format.</p></div>
 
     </div>
 
@@ -180,6 +231,101 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
+<section class="detail" id="date_range/1">
+
+  <div class="detail-header">
+    <a href="#date_range/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">date_range(uploads)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L187" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> date_range([<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>() | %{required(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) =&gt; <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}, ...]) ::
+  <a href="https://hexdocs.pm/elixir/Date.Range.html#t:t/0">Date.Range.t</a>() | nil</pre>
+
+      </div>
+
+<p>Extracts min/max date range from a list of uploads.</p><p>Examples:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">date_range</span><span class="p" data-group-id="8906183887-1">(</span><span class="p" data-group-id="8906183887-2">[</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="8906183887-3">%{</span><span class="s">&quot;filename&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;imported_devices_20190101_20210101.csv&quot;</span><span class="p" data-group-id="8906183887-3">}</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="s">&quot;pages_20200101_20220101.csv&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="8906183887-2">]</span><span class="p" data-group-id="8906183887-1">)</span><span class="w">
+</span><span class="nc">Date</span><span class="o">.</span><span class="n">range</span><span class="p" data-group-id="8906183887-4">(</span><span class="ld">~D[2019-01-01]</span><span class="p">,</span><span class="w"> </span><span class="ld">~D[2022-01-01]</span><span class="p" data-group-id="8906183887-4">)</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">date_range</span><span class="p" data-group-id="8906183887-5">(</span><span class="p" data-group-id="8906183887-6">[</span><span class="p" data-group-id="8906183887-6">]</span><span class="p" data-group-id="8906183887-5">)</span><span class="w">
+</span><span class="no">nil</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="extract_table/1">
+
+  <div class="detail-header">
+    <a href="#extract_table/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">extract_table(filename)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L318" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> extract_table(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>Extracts the table name from the provided filename.</p><p>Raises if the filename doesn't conform to the expected format.</p><p>Examples:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">extract_table</span><span class="p" data-group-id="0427489528-1">(</span><span class="s">&quot;my_data.csv&quot;</span><span class="p" data-group-id="0427489528-1">)</span><span class="w">
+</span><span class="gt">** (ArgumentError) invalid filename</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">extract_table</span><span class="p" data-group-id="0427489528-2">(</span><span class="s">&quot;imported_devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="0427489528-2">)</span><span class="w">
+</span><span class="s">&quot;imported_devices&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">extract_table</span><span class="p" data-group-id="0427489528-3">(</span><span class="s">&quot;devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="0427489528-3">)</span><span class="w">
+</span><span class="s">&quot;imported_devices&quot;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="local_dir/1">
+
+  <div class="detail-header">
+    <a href="#local_dir/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">local_dir(site_id)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L335" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Returns local directory for CSV imports storage.</p><p>Builds upon <code class="inline">$DATA_DIR</code> or <code class="inline">$PERSISTENT_CACHE_DIR</code> (if set) and falls back to /tmp</p><p>Examples:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">local_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">local_dir</span><span class="p" data-group-id="2415344167-1">(</span><span class="c">_site_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span><span class="p" data-group-id="2415344167-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">String</span><span class="o">.</span><span class="n">ends_with?</span><span class="p" data-group-id="2415344167-2">(</span><span class="n">local_dir</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/plausible-imports/37&quot;</span><span class="p" data-group-id="2415344167-2">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
+  </section>
+</section>
 <section class="detail" id="new_import/3">
 
   <div class="detail-header">
@@ -189,7 +335,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">new_import(site, user, opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L6" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L7" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -202,11 +348,83 @@ Pages
       <div class="specs">
 
           <pre translate="no"><span class="attribute">@spec</span> new_import(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) ::
-  {:ok, <a href="https://hexdocs.pm/oban/2.17.2/Oban.Job.html#t:t/0">Oban.Job.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.11.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+  {:ok, <a href="https://hexdocs.pm/oban/2.17.2/Oban.Job.html#t:t/0">Oban.Job.t</a>()}
+  | {:error, <a href="https://hexdocs.pm/ecto/3.11.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>() | :import_in_progress | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}</pre>
 
       </div>
 
 
+  </section>
+</section>
+<section class="detail" id="parse_filename!/1">
+
+  <div class="detail-header">
+    <a href="#parse_filename!/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">parse_filename!(filename)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L240" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> parse_filename!(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
+  {table :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), start_date :: <a href="https://hexdocs.pm/elixir/Date.html#t:t/0">Date.t</a>(), end_date :: <a href="https://hexdocs.pm/elixir/Date.html#t:t/0">Date.t</a>()}</pre>
+
+      </div>
+
+<p>Extracts table name and min/max dates from the filename.</p><p>Examples:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">parse_filename!</span><span class="p" data-group-id="2632100473-1">(</span><span class="s">&quot;my_data.csv&quot;</span><span class="p" data-group-id="2632100473-1">)</span><span class="w">
+</span><span class="gt">** (ArgumentError) invalid filename</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">parse_filename!</span><span class="p" data-group-id="2632100473-2">(</span><span class="s">&quot;imported_devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="2632100473-2">)</span><span class="w">
+</span><span class="p" data-group-id="2632100473-3">{</span><span class="s">&quot;imported_devices&quot;</span><span class="p">,</span><span class="w"> </span><span class="ld">~D[0001-01-01]</span><span class="p">,</span><span class="w"> </span><span class="ld">~D[2025-01-01]</span><span class="p" data-group-id="2632100473-3">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">parse_filename!</span><span class="p" data-group-id="2632100473-4">(</span><span class="s">&quot;devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="2632100473-4">)</span><span class="w">
+</span><span class="p" data-group-id="2632100473-5">{</span><span class="s">&quot;imported_devices&quot;</span><span class="p">,</span><span class="w"> </span><span class="ld">~D[0001-01-01]</span><span class="p">,</span><span class="w"> </span><span class="ld">~D[2025-01-01]</span><span class="p" data-group-id="2632100473-5">}</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="valid_filename?/1">
+
+  <div class="detail-header">
+    <a href="#valid_filename?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">valid_filename?(filename)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L290" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> valid_filename?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+
+      </div>
+
+<p>Checks if the provided filename conforms to the expected format.</p><p>Examples:</p><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="n">valid_filename?</span><span class="p" data-group-id="8361203047-1">(</span><span class="s">&quot;my_data.csv&quot;</span><span class="p" data-group-id="8361203047-1">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">valid_filename?</span><span class="p" data-group-id="8361203047-2">(</span><span class="s">&quot;imported_devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="8361203047-2">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="n">valid_filename?</span><span class="p" data-group-id="8361203047-3">(</span><span class="s">&quot;devices_00010101_20250101.csv&quot;</span><span class="p" data-group-id="8361203047-3">)</span><span class="w">
+</span><span class="no">true</span></code></pre>
   </section>
 </section>
 

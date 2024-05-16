@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -157,7 +157,15 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#merge_imported/5" translate="no">merge_imported(q, site, query, property, metrics)</a>
+        <a href="#merge_imported/4" translate="no">merge_imported(q, site, query, metrics)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#merge_imported_pageview_goals/5" translate="no">merge_imported_pageview_goals(q, site, query, page_exprs, metrics)</a>
 
       </div>
 
@@ -166,6 +174,25 @@ Pages
     <div class="summary-row">
       <div class="summary-signature">
         <a href="#merge_imported_timeseries/4" translate="no">merge_imported_timeseries(native_q, site, query, metrics)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#schema_supports_query?/1" translate="no">schema_supports_query?(query)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns a boolean indicating whether the combination of filters and
+breakdown property is possible to query from the imported tables.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#total_imported_visitors/2" translate="no">total_imported_visitors(site, query)</a>
 
       </div>
 
@@ -184,16 +211,38 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="merge_imported/5">
+<section class="detail" id="merge_imported/4">
 
   <div class="detail-header">
-    <a href="#merge_imported/5" class="detail-link" title="Link to this function">
+    <a href="#merge_imported/4" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">merge_imported(q, site, query, property, metrics)</h1>
+    <h1 class="signature" translate="no">merge_imported(q, site, query, metrics)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L57" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L110" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="merge_imported_pageview_goals/5">
+
+  <div class="detail-header">
+    <a href="#merge_imported_pageview_goals/5" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">merge_imported_pageview_goals(q, site, query, page_exprs, metrics)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L171" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -215,7 +264,54 @@ Pages
     </a>
     <h1 class="signature" translate="no">merge_imported_timeseries(native_q, site, query, metrics)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L10" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L63" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="schema_supports_query?/1">
+
+  <div class="detail-header">
+    <a href="#schema_supports_query?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">schema_supports_query?(query)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L51" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Returns a boolean indicating whether the combination of filters and
+breakdown property is possible to query from the imported tables.</p><p>Usually, when no filters are used, the imported schema supports the
+query. There is one exception though - breakdown by a custom property.
+We are currently importing only two custom properties - <code class="inline">url</code> and <code class="inline">path. Both these properties can only be used with their special goal filter (see</code>@goals_with_url<code class="inline">and</code>@goals_with_path`).</p>
+  </section>
+</section>
+<section class="detail" id="total_imported_visitors/2">
+
+  <div class="detail-header">
+    <a href="#total_imported_visitors/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">total_imported_visitors(site, query)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/imported.ex#L206" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

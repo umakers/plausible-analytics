@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CB02188E.js"></script>
+    <script src="dist/sidebar_items-B75C87F2.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -411,6 +411,25 @@ via the payload.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Cache.Adapter.html" translate="no">Plausible.Cache.Adapter</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Interface for the underlying cache implementation.
+Currently: ConCache</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Cache.Stats.html" translate="no">Plausible.Cache.Stats</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Keeps track of hit/miss ratio for various caches.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Cache.Warmer.html" translate="no">Plausible.Cache.Warmer</a>
 
   </div>
@@ -640,12 +659,31 @@ priv/data_migrations/NumericIDs/sql</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.DataMigration.PopulateEventSessionColumns.html" translate="no">Plausible.DataMigration.PopulateEventSessionColumns</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Populates event session columns with data from sessions table.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.DataMigration.Repo.html" translate="no">Plausible.DataMigration.Repo</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Ecto.Repo for Clickhouse data migrations, to be started manually,
 outside of the main application supervision tree.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.DataMigration.SiteImports.html" translate="no">Plausible.DataMigration.SiteImports</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Site imports migration backfilling SiteImport entries for old imports
+and alters import end dates to match actual end date of respective import stats.</p></div>
 
 </div>
 <div class="summary-row">
@@ -675,6 +713,24 @@ priv/data_migrations/VersionedSessions/sql</p></div>
 
     <div class="summary-synopsis"><p>  Custom type for event name. Accepts Strings and Integers and stores them as String. Returns
   cast error if any other type is provided. Accepting integers is important for 404 tracking.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Ecto.Types.CompiledRegex.html" translate="no">Plausible.Ecto.Types.CompiledRegex</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Ensures that the regex is compiled on load</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Exports.html" translate="no">Plausible.Exports</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Contains functions to export data for events and sessions as Zip archives.</p></div>
 
 </div>
 <div class="summary-row">
@@ -758,16 +814,47 @@ creating and deleting funnel definitions.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Google.Api.html" translate="no">Plausible.Google.Api</a>
+    <a href="Plausible.Google.API.html" translate="no">Plausible.Google.API</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>API to Google services.</p></div>
 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Google.Api.Mock.html" translate="no">Plausible.Google.Api.Mock</a>
+    <a href="Plausible.Google.API.Mock.html" translate="no">Plausible.Google.API.Mock</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>Mock of API to Google services.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.GA4.API.html" translate="no">Plausible.Google.GA4.API</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>API for Google Analytics 4.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.GA4.HTTP.html" translate="no">Plausible.Google.GA4.HTTP</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>HTTP client implementation for Google Analytics 4 API.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.GA4.ReportRequest.html" translate="no">Plausible.Google.GA4.ReportRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Report request struct for Google Analytics 4 API</p></div>
 
 </div>
 <div class="summary-row">
@@ -779,9 +866,29 @@ creating and deleting funnel definitions.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Google.ReportRequest.html" translate="no">Plausible.Google.ReportRequest</a>
+    <a href="Plausible.Google.UA.API.html" translate="no">Plausible.Google.UA.API</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>API for Universal Analytics</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.UA.HTTP.html" translate="no">Plausible.Google.UA.HTTP</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>HTTP client implementation for Universal Analytics API.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Google.UA.ReportRequest.html" translate="no">Plausible.Google.UA.ReportRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Report request struct for Universal Analytics API</p></div>
 
 </div>
 <div class="summary-row">
@@ -851,7 +958,17 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
 
   </div>
 
-    <div class="summary-synopsis"><p>CSV importer from S3 that uses ClickHouse <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/s3">s3 table function.</a></p></div>
+    <div class="summary-synopsis"><p>CSV importer from either S3 for which it uses ClickHouse <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/s3">s3 table function</a>
+or from local storage for which it uses <a href="https://clickhouse.com/docs/en/sql-reference/table-functions/input">input function.</a></p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.GoogleAnalytics4.html" translate="no">Plausible.Imported.GoogleAnalytics4</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Import implementation for Google Analytics 4.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1166,6 +1283,15 @@ clean-up process to act as a rate limiter.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.RequestLogger.html" translate="no">Plausible.RequestLogger</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Custom request logger which</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.S3.html" translate="no">Plausible.S3</a>
 
   </div>
@@ -1223,6 +1349,24 @@ clean-up process to act as a rate limiter.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Shield.HostnameRule.html" translate="no">Plausible.Shield.HostnameRule</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Schema for Hostnames allow list</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Shield.HostnameRuleCache.html" translate="no">Plausible.Shield.HostnameRuleCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Allows retrieving Hostname Rules by domain</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Shield.IPRule.html" translate="no">Plausible.Shield.IPRule</a>
 
   </div>
@@ -1237,6 +1381,24 @@ clean-up process to act as a rate limiter.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Allows retrieving IP Rules by domain and IP</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Shield.PageRule.html" translate="no">Plausible.Shield.PageRule</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Schema for Pages block list</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Shield.PageRuleCache.html" translate="no">Plausible.Shield.PageRuleCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Allows retrieving Page Rules by domain</p></div>
 
 </div>
 <div class="summary-row">
@@ -1525,6 +1687,15 @@ and <code class="inline">StatsAPIFilterParser</code>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.Filters.WhereBuilder.html" translate="no">Plausible.Stats.Filters.WhereBuilder</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A module for building am ecto where clause of a query out of a query.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.Fragments.html" translate="no">Plausible.Stats.Fragments</a>
 
   </div>
@@ -1567,6 +1738,15 @@ ClickHouse funnel query based on <a href="Plausible.Funnel.html"><code class="in
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.Metrics.html" translate="no">Plausible.Stats.Metrics</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A module listing all available metrics in Plausible.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.Props.html" translate="no">Plausible.Stats.Props</a>
 
   </div>
@@ -1586,6 +1766,16 @@ ClickHouse funnel query based on <a href="Plausible.Funnel.html"><code class="in
   </div>
 
     <div class="summary-synopsis"><p>Sampling related functions</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Stats.TableDecider.html" translate="no">Plausible.Stats.TableDecider</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module contains logic for deciding which tables need to be queried given a query
+and metrics, with the purpose of reducing the number of queries and JOINs needed to perform.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1680,6 +1870,15 @@ owners assuming</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Workers.ClickhouseCleanSites.html" translate="no">Plausible.Workers.ClickhouseCleanSites</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Cleans deleted site data from ClickHouse asynchronously.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Workers.ExpireDomainChangeTransitions.html" translate="no">Plausible.Workers.ExpireDomainChangeTransitions</a>
 
   </div>
@@ -1691,11 +1890,30 @@ before redeploying their scripts and integrations.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Workers.ExportAnalytics.html" translate="no">Plausible.Workers.ExportAnalytics</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Worker for running CSV export jobs. Supports S3 and local storage.
+To avoid blocking the queue, a timeout of 15 minutes is enforced.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Workers.ImportAnalytics.html" translate="no">Plausible.Workers.ImportAnalytics</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Worker for running analytics import jobs.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Workers.LocalImportAnalyticsCleaner.html" translate="no">Plausible.Workers.LocalImportAnalyticsCleaner</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Worker for cleaning local files left after analytics import jobs.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1710,6 +1928,15 @@ before redeploying their scripts and integrations.</p></div>
     <a href="Plausible.Workers.NotifyAnnualRenewal.html" translate="no">Plausible.Workers.NotifyAnnualRenewal</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Workers.NotifyExportedAnalytics.html" translate="no">Plausible.Workers.NotifyExportedAnalytics</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This worker delivers emails for successful and failed exports</p></div>
 
 </div>
 <div class="summary-row">
@@ -1915,6 +2142,15 @@ benefits for Growth, Business, and Enterprise plans.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Components.FirstDashboardLaunchBanner.html" translate="no">PlausibleWeb.Components.FirstDashboardLaunchBanner</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A banner that appears on the first dashboard launch</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Components.Generic.html" translate="no">PlausibleWeb.Components.Generic</a>
 
   </div>
@@ -2073,6 +2309,20 @@ to the Plausible frontend.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.GoogleAnalyticsController.html" translate="no">PlausibleWeb.GoogleAnalyticsController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.GoogleAnalyticsView.html" translate="no">PlausibleWeb.GoogleAnalyticsView</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.InvitationController.html" translate="no">PlausibleWeb.InvitationController</a>
 
   </div>
@@ -2097,6 +2347,24 @@ to the Plausible frontend.</p></div>
     <a href="PlausibleWeb.LayoutView.JWT.html" translate="no">PlausibleWeb.LayoutView.JWT</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.CSVExport.html" translate="no">PlausibleWeb.Live.CSVExport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing scheduling, watching, downloading, and deleting S3 and local exports.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.CSVImport.html" translate="no">PlausibleWeb.Live.CSVImport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing uploading CSVs for imported tables to S3 or local storage</p></div>
 
 </div>
 <div class="summary-row">
@@ -2331,6 +2599,24 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.HostnameRules.html" translate="no">PlausibleWeb.Live.Shields.HostnameRules</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing hostname Rules management</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.Hostnames.html" translate="no">PlausibleWeb.Live.Shields.Hostnames</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView for Hostnames Shield</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Live.Shields.IPAddresses.html" translate="no">PlausibleWeb.Live.Shields.IPAddresses</a>
 
   </div>
@@ -2345,6 +2631,24 @@ and the number of steps they have.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>LiveView allowing IP Rules management</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.PageRules.html" translate="no">PlausibleWeb.Live.Shields.PageRules</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing page Rules management</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.Pages.html" translate="no">PlausibleWeb.Live.Shields.Pages</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView for IP Addresses Shield</p></div>
 
 </div>
 <div class="summary-row">
