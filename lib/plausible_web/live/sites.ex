@@ -167,12 +167,19 @@ defmodule PlausibleWeb.Live.Sites do
           {@empty_state_description}
         </p>
         <div class="flex flex-col sm:flex-row gap-3 mt-6">
-          <.button_link
+          <!--<.button_link
             href={"/sites/new?flow=#{PlausibleWeb.Flows.provisioning()}"}
             theme="primary"
             mt?={false}
           >
             <Heroicons.plus class="size-4" /> Add website
+          </.button_link>-->
+          <.button_link
+            href={"https://umakers.dk"}
+            theme="primary"
+            mt?={false}
+          >
+            Hosting af Umakers
           </.button_link>
           <.button_link
             :if={not Teams.setup?(@current_team) and @has_sites?}
